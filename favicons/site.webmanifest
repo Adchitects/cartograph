@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Cartograph - Founded by operators. For operators.",
+  "short_name": "Cartograph",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#EFEF58",
   "background_color": "#ffffff",
   "display": "standalone"
 }
