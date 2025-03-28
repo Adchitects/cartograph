@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #414141;
+    color: #e1e1e1;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    overflow: hidden;
+    font-family: 'Helvetica', Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+
+}
+
+body:not(.loaded) .bg1,
+body:not(.loaded) .bg1-mobile,
+body:not(.loaded) .bg1-tablet,
+body:not(.loaded) .bg2,
+body:not(.loaded) .bg2-mobile,
+body:not(.loaded) .bg2-tablet,
+body:not(.loaded) .letter1,
+body:not(.loaded) .letter2,
+body:not(.loaded) .letter3,
+body:not(.loaded) .letter4,
+body:not(.loaded) .letter5,
+body:not(.loaded) .letter6,
+body:not(.loaded) .letter7,
+body:not(.loaded) .letter8,
+body:not(.loaded) .letter9,
+body:not(.loaded) .letter10,
+body:not(.loaded) .text-under-logo,
+body:not(.loaded) .content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.logo {
+    width: 100%;
+    max-width: calc(100% - 20vw - 40px);
+    /* max-width: 1468px; */
+    position: relative;
+    padding-top: 42px;
+    padding-left: 40px;
+    z-index: 10;
+}
+
+@media screen and (min-width: 2500px) {
+    .logo {
+        max-width: 1668px;
+    }
+}
+
+.logo  svg {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1660px) and (max-height: 1023px) {
+    .logo { 
+        max-width: calc(100% - 22vw - 40px);
+        padding-top: 38px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .logo { 
+        max-width: calc(100% - 19vw - 40px);
+        max-width: 1068px;
+        padding-top: 38px;
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .logo { 
+        max-width: calc(100% - 22vw - 40px);
+        padding-top: 38px;
+    }
+}
+
+@media screen and (width: 1440px) and (min-height: 778px) and (max-height: 860px) {
+    .logo { 
+        max-width: calc(100% - 24vw - 40px);
+        padding-top: 38px;
+    }
+}
+
+
+@media screen and (width: 1024px) and (height: 1366px) {
+    .logo {
+        /* max-width: calc(100% - 40px); */
+        max-width: 100%;
+        width: 100%;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+    .logo svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logo {
+        /* max-width: calc(100% - 40px); */
+        max-width: 100%;
+        width: 100%;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+    }
+    .logo svg {
+        width: 100%;
+        height: auto;
+    }
+}
+.text-under-logo {
+    font-family: 'Soehne Mono', sans-serif;
+    font-size: 22px;
+    line-height: 100%;
+    font-weight: 400;
+    color: #e1e1e1;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+    .text-under-logo {
+        font-size: 16px;
+        /* margin-top: 8px; */
+        letter-spacing: 0.01em;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .text-under-logo {
+    margin-top: 4px;
+    }
+}
+
+@media screen and (max-width: 392px) {
+    .text-under-logo {
+        font-size: 14px;
+    }
+}
+
+.bg {
+    /* width: 100%;
+    height: 100%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bg svg {
+   width: 100%;
+   height: 110%; /* 110% */
+   /* height: 120%; */
+}
+
+@media screen and (min-width: 1440px) {
+    .bg svg {
+        width: 100%;
+        height: 100%; /* 110% */
+        /* height: 120%; */
+     }
+}
+@media screen and (width: 2560px) and (height: 1440px) {
+    .bg svg {
+        width: 105%;
+        height: 100%;
+     }
+}
+
+@media screen and (width: 1920px) and (height: 1080px) {
+    .bg svg {
+        width: 105%;
+        height: 100%;
+     }
+}
+
+
+.bg .bg1, .bg .bg1-mobile, .bg .bg1-tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.bg .bg2, .bg .bg2-mobile, .bg .bg2-tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.bg .bg1-mobile svg,
+.bg .bg2-mobile svg,
+.bg .bg1-tablet svg,
+.bg .bg2-tablet svg {
+    width: 100%;
+    height: 100%;
+    /* height: auto */
+}
+.bg .bg1-mobile,
+.bg .bg1-tablet {
+    display: none;
+}
+.bg .bg1 {
+    display: block;
+}
+.bg .bg2-mobile,
+.bg .bg2-tablet {
+    display: none;
+}
+.bg .bg2 {
+    display: block;
+}
+@media screen and (width: 1024px) and (height: 1366px) {
+    .bg .bg1-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg .bg1 {
+        display: none;
+    }
+    .bg .bg2-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg .bg2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 900px) {
+    .bg .bg1-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg .bg1 {
+        display: none;
+    }
+    .bg .bg2-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg .bg2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .bg .bg1-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg .bg1-tablet {
+        display: none;
+    }
+    .bg .bg2-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg .bg2-tablet {
+        display: none;
+    }
+}
+
+.content {
+    font-family: 'Helvetica', Arial;
+    font-size: 22px;
+    line-height: 100%;
+    font-weight: 700;
+    position: absolute;
+    bottom: 40px; /*40px*/
+    right: 40px; /*40px*/
+    z-index: 0;
+    width: 100%;
+    max-width: 541px;
+    line-height: normal;
+}
+.content p {
+    margin-bottom: 20px;
+}
+.content a {
+    color: #e1e1e1;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1440px) {
+    .content {
+        
+        font-size: 16px;
+        max-width: 389px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        max-width: 374px;
+        right: 16px;
+        bottom: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .content {
+        max-width: 307px;
+    }
+}
+
+@media screen and (max-width: 392px) {
+    .content {
+        max-width: 270px;
+        font-size: 14px;
+    }
+}
